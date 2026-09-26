@@ -5,10 +5,10 @@ import 'package:quiz_quem_e_esse_pokemon/screens/components/type_pokemon.dart';
 
 class PokemonItemWidget extends StatelessWidget {
   const PokemonItemWidget({
-    Key? key,
+    super.key,
     required this.pokemon,
     required this.index,
-  }) : super(key: key);
+  });
 
   final Pokemon pokemon;
   final int index;
@@ -20,7 +20,7 @@ class PokemonItemWidget extends StatelessWidget {
         children: [
           Container(
             decoration: BoxDecoration(
-                color: pokemon.baseColor!.withOpacity(0.8),
+                color: (pokemon.baseColor ?? Colors.grey).withValues(alpha: 0.8),
                 borderRadius: BorderRadius.circular(16)),
             child: Padding(
               padding: const EdgeInsets.all(16),
@@ -43,7 +43,7 @@ class PokemonItemWidget extends StatelessWidget {
                       Text(
                         '#${pokemon.num}',
                         style: TextStyle(
-                            color: Colors.black.withOpacity(0.4),
+                            color: Colors.black.withValues(alpha: 0.4),
                             fontWeight: FontWeight.bold,
                             fontSize: 14),
                       ),
@@ -78,6 +78,11 @@ class PokemonItemWidget extends StatelessWidget {
             child: Image.network(
               pokemon.image,
               height: 120,
+              errorBuilder: (context, error, stackTrace) => const Icon(
+                Icons.catching_pokemon,
+                size: 80,
+                color: Colors.white,
+              ),
             ),
           ),
         ],

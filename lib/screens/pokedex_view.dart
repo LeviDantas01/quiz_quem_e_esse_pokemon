@@ -5,9 +5,9 @@ import 'package:quiz_quem_e_esse_pokemon/screens/pokedex.dart';
 
 class HomePagePokedex extends StatelessWidget {
   const HomePagePokedex({
-    Key? key,
+    super.key,
     required this.list,
-  }) : super(key: key);
+  });
   final List<Pokemon> list;
 
   @override

@@ -1,8 +1,7 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.quiz_quem_e_esse_pokemon">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="Qeum é esse Pokémon"
+        android:label="Quem é esse Pokémon"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity

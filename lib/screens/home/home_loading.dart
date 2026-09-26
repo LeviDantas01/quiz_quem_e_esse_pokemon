@@ -17,7 +17,7 @@ class HomeLoading extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              CircularProgressIndicator(),
+              CircularProgressIndicator(color: Colors.red),
               SizedBox(
                 height: 50,
               ),

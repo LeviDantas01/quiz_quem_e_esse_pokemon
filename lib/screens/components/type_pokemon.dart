@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class TypeWidget extends StatelessWidget {
   const TypeWidget({
-    Key? key,
+    super.key,
     required this.name,
-  }) : super(key: key);
+  });
   final String name;
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class TypeWidget extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 4),
       child: Container(
         decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.2),
+            color: Colors.white.withValues(alpha: 0.2),
             borderRadius: BorderRadius.circular(16)),
         child: Padding(
           padding: const EdgeInsets.all(6),
